@@ -501,7 +501,7 @@ if(isInShop === true ){
       alert("کد وارد شده صحیح نمی باشد")
    }*/
 
-   var tasksArray = {
+   /*var tasksArray = {
       ali: ['html','css','java'],
       amin: ['react','vue','angular'],
       ahmad:['asp','c#'],
@@ -513,4 +513,19 @@ if(isInShop === true ){
    
    var employTasks = tasksArray[employName];
    employTasks.push(newTaskName);
-   console.log(tasksArray)
+   console.log(tasksArray)*/
+
+   var cities = {
+      Tehran: ['teh1','teh2','teh3','teh4'],
+      Arak: ['arak1','arak2','arak3','arak4'],
+      Qhom: ['qhom1','qhom2','qhom3','qhom4'],
+      Tabriz: ['tabriz1','tabriz2','tabriz3','tabriz4']
+   }
+
+   var startProvine = prompt("Enter The Provine: ")
+   var mainProvineCities = cities[startProvine];
+
+   mainProvineCities.forEach(function(city){
+      console.log(city)
+   });
+   
