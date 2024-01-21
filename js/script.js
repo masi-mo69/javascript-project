@@ -459,7 +459,7 @@ if(isInShop === true ){
    }
   */
 
-   var todosArray = [
+   /*var todosArray = [
       {id:1, title:'learn js', isdoing:false},
       {id:2, title:'make footer', isdoing:true},
       {id:3, title:'design', isdoing:false},
@@ -499,4 +499,18 @@ if(isInShop === true ){
       console.log("Todo Array: ",todosArray)
    }else{
       alert("کد وارد شده صحیح نمی باشد")
+   }*/
+
+   var tasksArray = {
+      ali: ['html','css','java'],
+      amin: ['react','vue','angular'],
+      ahmad:['asp','c#'],
+      nima: ['admin','contant']
    }
+
+   var newTaskName = prompt('Enter the New task: ')
+   var employName = prompt('Enter the Employ Name: ')
+   
+   var employTasks = tasksArray[employName];
+   employTasks.push(newTaskName);
+   console.log(tasksArray)
