@@ -446,7 +446,7 @@ if(isInShop === true ){
    }*/
 
 
-   var word = prompt("Enter Your Word?");
+ /*  var word = prompt("Enter Your Word?");
    var charectersArray = word.split('');
    var reverseCharacters = charectersArray.reverse();
    var reverseWord = reverseCharacters.join('');
@@ -457,4 +457,46 @@ if(isInShop === true ){
    }else{
       console.log('از هر دو جهت به یک شکل خوانده نمی شود')
    }
-  
+  */
+
+   var todosArray = [
+      {id:1, title:'learn js', isdoing:false},
+      {id:2, title:'make footer', isdoing:true},
+      {id:3, title:'design', isdoing:false},
+      {id:4, title:'Vue js', isdoing:false}
+   ];
+
+   var userMenu = prompt("Choose your Item: \n 1.Add Todo \n 2.Remove Todo \n 3.Do Todo");
+
+   if(userMenu === '1'){
+      // alert("Add")
+      var newTodoName = prompt('Enter the New todo Name: ','')
+      var newTodoObject = {
+         id:todosArray.length +1,
+         title:newTodoName,
+         isdoing:false
+      }
+      todosArray.push(newTodoObject);
+      console.log("Todo Array: ",todosArray)
+
+   }else if(userMenu === '2'){
+      // alert("Remove")
+      var RemoveTodoName = prompt('Enter the Removable todo Name: ','')
+      var RemovableTodoIndex = todosArray.findIndex(function(todo){
+         return todo.title === RemoveTodoName
+      })
+      todosArray.splice(RemovableTodoIndex,1);
+      console.log("Todo Array: ",todosArray)
+
+   }else if(userMenu === '3'){
+      // alert("Doing")
+      var EditTodoName = prompt('Enter the Editable todo Name: ','')
+      todosArray.forEach(function(todo){
+         if(todo.title === EditTodoName){
+            todo.isdoing = true
+         }
+      })
+      console.log("Todo Array: ",todosArray)
+   }else{
+      alert("کد وارد شده صحیح نمی باشد")
+   }
