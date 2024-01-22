@@ -552,7 +552,7 @@ if(isInShop === true ){
    alert("Enter Final Score :" + score)
    */
 
-   var num1 = +prompt('Enter your First Number :')
+   /*var num1 = +prompt('Enter your First Number :')
    var num2 = +prompt('Enter your Second Number :')
 
    var userOperator = prompt('Enter your Operator :\n 1. + \n 2. - \n 3.* \n 4. ** \n 5./')
@@ -585,4 +585,24 @@ if(isInShop === true ){
    }
    function power(num1 , num2){
       alert(num1 ** num2);
+   }*/
+
+
+   var userData = [
+      {id:1, username:'amin', password:'01010101', email:'amin@gmail.com'},
+      {id:2, username:'amir', password:'02020202', email:'amir@gmail.com'},
+      {id:3, username:'ali', password:'03030303', email:'ali@gmail.com'},
+      {id:4, username:'mohammad', password:'mo12345', email:'mohammad@gmail.com'},
+      {id:5, username:'sara', password:'sara369741', email:'sara@gmail.com'},
+      {id:6, username:'reza', password:'reza123456', email:'reza@gmail.com'}
+   ]
+
+   var username = prompt('Enter your userName: ');
+
+   var mainUserData = userData.find(function(user){
+      return user.username === username
+   })
+   if(mainUserData === undefined){
+      alert('شما در سایت ثبت نام نکردید')
    }
+   console.log(mainUserData);
