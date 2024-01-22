@@ -607,7 +607,7 @@ if(isInShop === true ){
    }
    console.log(mainUserData);*/
 
-   var minute = prompt('Enter The Minute: ')
+   /*var minute = prompt('Enter The Minute: ')
    var second = prompt('Enter The Second: ')
 
    var timer = setInterval(function(){
@@ -624,4 +624,13 @@ if(isInShop === true ){
 
     console.log('Timer: ' + minute + ' : ' + second)
       second--
-   } , 1000)
+   } , 1000)*/
+
+   var hasProfile = false 
+
+   setTimeout(() => {
+      if(!hasProfile){
+         alert('لطفا عکس پروفایل خود را وارد کنید')
+      }
+      
+   }, 5000);
