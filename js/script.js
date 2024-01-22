@@ -529,7 +529,7 @@ if(isInShop === true ){
       console.log(city)
    });*/
 
-   var allQuedtions = [
+   /*var allQuedtions = [
       {id:1 , title:'2 + 2', answer:'4'},
       {id:2 , title:'4 * 2', answer:'8'},
       {id:3 , title:'4 ** 2', answer:'16'},
@@ -550,4 +550,39 @@ if(isInShop === true ){
       }
    })
    alert("Enter Final Score :" + score)
-   
+   */
+
+   var num1 = +prompt('Enter your First Number :')
+   var num2 = +prompt('Enter your Second Number :')
+
+   var userOperator = prompt('Enter your Operator :\n 1. + \n 2. - \n 3.* \n 4. ** \n 5./')
+
+   if(userOperator === '1'){
+      sum(num1 , num2);
+   }else if(userOperator === '2'){
+      sub(num1 , num2);
+   }else if(userOperator === '3'){
+      multi(num1 , num2);
+   }else if(userOperator === '4'){
+      power(num1 , num2);
+   }else if(userOperator === '5'){
+      div(num1 , num2);
+   }else{
+      alert('کد وارد شده معتبر نیست')
+   }
+
+   function sum(num1 , num2){
+      alert(num1 + num2);
+   }
+   function sub(num1 , num2){
+      alert(num1 - num2);
+   }
+   function div(num1 , num2){
+      alert(num1 / num2);
+   }
+   function multi(num1 , num2){
+      alert(num1 * num2);
+   }
+   function power(num1 , num2){
+      alert(num1 ** num2);
+   }
