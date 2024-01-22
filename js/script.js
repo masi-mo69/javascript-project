@@ -515,7 +515,7 @@ if(isInShop === true ){
    employTasks.push(newTaskName);
    console.log(tasksArray)*/
 
-   var cities = {
+   /*var cities = {
       Tehran: ['teh1','teh2','teh3','teh4'],
       Arak: ['arak1','arak2','arak3','arak4'],
       Qhom: ['qhom1','qhom2','qhom3','qhom4'],
@@ -527,5 +527,27 @@ if(isInShop === true ){
 
    mainProvineCities.forEach(function(city){
       console.log(city)
-   });
+   });*/
+
+   var allQuedtions = [
+      {id:1 , title:'2 + 2', answer:'4'},
+      {id:2 , title:'4 * 2', answer:'8'},
+      {id:3 , title:'4 ** 2', answer:'16'},
+      {id:4 , title:'25 / 5', answer:'5'},
+      {id:5 , title:'7 * 4', answer:'28'},
+      {id:6 , title:'100 / 2', answer:'50'},
+      {id:7 , title:'Capital of Iran', answer:'Tehran'}
+   ]
+
+   var score = 0;
+   var mainAnswer = '';
+
+   allQuedtions.forEach(function(question){
+      mainAnswer = prompt(question.title + '?')
+
+      if(mainAnswer == question.answer){
+         score ++;
+      }
+   })
+   alert("Enter Final Score :" + score)
    
