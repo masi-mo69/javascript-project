@@ -588,7 +588,7 @@ if(isInShop === true ){
    }*/
 
 
-   var userData = [
+   /*var userData = [
       {id:1, username:'amin', password:'01010101', email:'amin@gmail.com'},
       {id:2, username:'amir', password:'02020202', email:'amir@gmail.com'},
       {id:3, username:'ali', password:'03030303', email:'ali@gmail.com'},
@@ -605,4 +605,23 @@ if(isInShop === true ){
    if(mainUserData === undefined){
       alert('شما در سایت ثبت نام نکردید')
    }
-   console.log(mainUserData);
+   console.log(mainUserData);*/
+
+   var minute = prompt('Enter The Minute: ')
+   var second = prompt('Enter The Second: ')
+
+   var timer = setInterval(function(){
+
+      if(second === -1){
+         minute--
+         second = 59
+      }
+
+      if(minute === 0 && second === 0){
+         clearInterval(timer);
+      }
+
+
+    console.log('Timer: ' + minute + ' : ' + second)
+      second--
+   } , 1000)
