@@ -29,12 +29,10 @@
     <button onclick="clickFunc()">Change Color</button> -->
     <div class="login-page">
         <div class="form">
-            <input type="text" 
-            placeholder="name"
-            class="username"/>
-            <input type="password" 
-            placeholder="password"
-            class="password"/>
+            <input type="text" placeholder="name" class="username"  onkeydown="usernameValidation()"/>
+             <span class="username-validation">Most Contain 12 Characters (Min)</span>           
+            <input type="password" placeholder="password" class="password" onkeydown="passwordValidation()"/>
+             <span class="password-validation">Most Contain 8 Characters (Min)</span>   
             <button onclick="dataValidation()">login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
         </div>

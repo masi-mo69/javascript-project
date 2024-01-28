@@ -71,7 +71,7 @@ function clickFunc(){
 }*/
 
 
-let userNameInput = document.querySelector('.username')
+/*let userNameInput = document.querySelector('.username')
 let passwordInput = document.querySelector('.password')
 let modal = document.querySelector('.modal')
 
@@ -93,4 +93,34 @@ function dataValidation(){
         modal.style.display = 'none'
     }, 3000);
     // console.log(userNameValue , passwordValue)
+}*/
+
+let usernameMessage = document.querySelector('.username-validation')
+let passwordMessage = document.querySelector('.password-validation')
+
+let usernameInput = document.querySelector('.username')
+let passwordInput = document.querySelector('.password')
+
+function usernameValidation() {
+    // alert('username')
+    if(usernameInput.value.length < 12 ){
+        usernameMessage.style.color = 'red'
+        usernameMessage.innerHTML = 'Most Contain 12 Characters (Min)'
+        usernameMessage.style.display = 'block'
+    } else {
+        usernameMessage.style.color = 'green'
+        usernameMessage.innerHTML = 'Correct Username Value'
+    }
+}
+
+function passwordValidation() {
+    // alert('password')
+    if(passwordInput.value.length < 8 ){
+        passwordMessage.style.color = 'red'
+        passwordMessage.innerHTML = 'Most Contain 8 Characters (Min)'
+        passwordMessage.style.display = 'block'
+    } else {
+        passwordMessage.style.color = 'green'
+        passwordMessage.innerHTML = 'Correct password Value'
+    }
 }
