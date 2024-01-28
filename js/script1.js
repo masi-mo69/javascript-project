@@ -63,11 +63,34 @@ ulElem.append(otherliItem)
 console.log(newliItem)
 console.log(ulElem)*/
 
-let h1Elem = document.getElementById('title')
+/*let h1Elem = document.getElementById('title')
 
 function clickFunc(){
     // alert('Click shod!')
     h1Elem.style.color = 'red'
+}*/
+
+
+let userNameInput = document.querySelector('.username')
+let passwordInput = document.querySelector('.password')
+let modal = document.querySelector('.modal')
+
+function dataValidation(){
+    let userNameValue = userNameInput.value
+    let passwordValue = passwordInput.value
+
+    if(userNameValue.length < 12 || passwordValue.length < 8){
+        // alert('Error')
+        modal.style.background = 'rgb(223, 28, 28)'
+        modal.style.display = 'inline'
+        modal.innerHTML = 'لطفا اطلاعات لازم را به درستی وراد نمایید'
+    }else {
+        modal.style.display = 'inline'
+        modal.innerHTML = 'لاگین با موفقیت انجام شد'
+        modal.style.background = 'green'
+    }
+    setTimeout(function() {
+        modal.style.display = 'none'
+    }, 3000);
+    // console.log(userNameValue , passwordValue)
 }
-
-
