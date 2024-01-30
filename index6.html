@@ -1,0 +1,45 @@
+<div class="tabs-container mt-sm-3 mb-0 mb-sm-1">
+    <div class="tabs d-flex flex-column tab-adsl tab-adsl-menu" >
+        <input type="radio" id="radio-5" name="tabs" checked />
+        <label class="tab sp-dir check-box-effect" for="radio-5" onclick="changeTab('fall')">16 مگابیت</label>
+
+        <input type="radio" id="radio-6" name="tabs" />
+        <label class="tab sp-dir check-box-effect" for="radio-6" onclick="changeTab('eighteen')">8 مگابیت</label>
+
+        <input type="radio" id="radio-7"  name="tabs"  />
+        <label class="tab sp-dir check-box-effect" for="radio-7"  onclick="changeTab('four')">4 مگابیت</label>
+        <input type="radio" id="radio-8"  name="tabs"  />
+        <label class="tab sp-dir check-box-effect" for="radio-8"  onclick="changeTab('Three')">3 مگابیت</label>
+        <input type="radio" id="radio-9"  name="tabs"  />
+        <!-- <label class="tab sp-dir check-box-effect" for="radio-9"  onclick="changeTab('eight')">2 مگابیت</label> -->
+        <input type="radio" id="radio-10"  name="tabs"  />
+        <!--<label class="tab sp-dir check-box-effect" for="radio-10"  onclick="changeTab('nine')">   1 مگابیت</label>-->
+        <input type="radio" id="radio-11"  name="tabs"  />
+        <!--<label class="tab sp-dir  check-box-effect" for="radio-11"   onclick="changeTab('ten')"> 512 کیلوبیت </label>-->
+
+
+    </div>
+</div>
+<script>
+
+    function changeTab(id){
+
+        var i, tabcontent
+        tabcontent = document.getElementsByClassName("content-adsl");
+
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        document.getElementById(id).style.display= "block";
+
+    }
+
+
+    window.onload = function() {
+
+        changeTab("fall");
+    };
+
+
+
+</script>
