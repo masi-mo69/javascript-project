@@ -1,0 +1,26 @@
+.tel-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tel-icon {
+    position: relative;
+}
+
+.tel-number {
+    position: absolute;
+    top: 100%;
+    right: 0; /* کادر سمت راست آیکون */
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* ارتفاع کادر مخفی شده */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* انیمیشن کشویی */
+}
+
+.tel-icon:hover + .tel-number {
+    max-height: 100px; /* ارتفاع کادر هنگام نمایش */
+}
