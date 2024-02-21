@@ -19,7 +19,7 @@ function addTOdoList(newInputElem){
     todoUlElem.append(addTodoLi)
 
     addTodoTrash.addEventListener('click' , function(event) {
-        event.target.
+        event.target.parentElement.remove();
     })
 }
 addTodoForm.addEventListener('submit' , function(event){
